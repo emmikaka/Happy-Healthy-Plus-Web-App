@@ -1,0 +1,56 @@
+version: '3.8'
+services:
+    php:
+        build: php/
+        container_name: web_php
+        restart: always
+        depends_on:
+          - db
+        volumes:
+          - ./html/:/var/www/html
+        expose:
+          - "9000:80"
+        networks:
+          - BMINetwork
+    nginx:
+        image: nginx:latest
+        container_name: web_nginx
+        restart: always
+        volumes:
+          - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+          - ./nginx/conf.d:/etc/nginx/conf.d:ro
+        volumes_from:
+          - php
+        ports:
+          - "8000:80"
+        networks:
+          - BMINetwork
+    db:
+        container_name: db
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: bmi
+            MYSQL_DATABASE: MYSQL_DATABASE
+            MYSQL_USER: MYSQL_USER
+            MYSQL_PASSWORD: MYSQL_PASSWORD
+        volumes:
+            - ./db/initdb/:/docker-entrypoint-initdb.d
+            # - ./db/data/:/var/lib/mysql
+        ports:
+            - "9906:3306"
+        networks:
+            - BMINetwork
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "8080:80"
+        restart: always
+        environment:
+            PMA_HOST: db
+        depends_on:
+            - db
+        networks:
+            - BMINetwork
+networks:
+  BMINetwork:

@@ -1,0 +1,3 @@
+db/data/auto.cnf
+db/data/binlog.index
+db/data/mysql.sock
