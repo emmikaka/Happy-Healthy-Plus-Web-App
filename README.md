@@ -23,7 +23,7 @@ myweb
 |  |  |__ tinanic.sql
 |  |__ backup/
 |__ php/
-   |__ Dockerfile</code>
+   |__ Dockerfile
 ```   
    
 ## รัน Container ด้วย docker-compose 
