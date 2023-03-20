@@ -22,7 +22,7 @@
 |  |  |__ nginx.conf
 |  |__ conf.d/
 |     |__ default.conf
-|__ mariadb/
+|__ db/
 |  |__ data/
 |  |__ initdb/
 |  |  |__ BMI.sql
