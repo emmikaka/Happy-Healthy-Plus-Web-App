@@ -63,7 +63,7 @@ docker network ls
 * หากต้องการตรวจสอบว่า container ที่เรา run เชื่อมกับ container ของ database ได้หรือไม่ให้เรา exec เข้าไปใน container phpfpm เพื่อ ping container db ซึ่งเราจั้งชื่อว่า web_php เราตั้งชื่อ services ว่า db
 
 ``` java
-docker exec -it phpfpm sh
+docker exec -it web_php sh
 ```
 
 เมื่อเข้าไปใน container แล้วสามารถ ping db ได้
