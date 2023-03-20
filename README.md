@@ -5,10 +5,15 @@
  * nginx เป็น web server หลัก <br>
  * mysql, phpmyadmin เป็น database <br>
  
+ ## สมาชิก
+ * นางสาวศิรินภา ไชยสิทธ์ รหัส 623040634-3
+ * นางสาวอลิศา ฉัตรชูเกียรติกุล รหัส 623040660-2
+ * นางสาวเอมมิกา กางกรณ์ รหัส 623040665-2
+ 
  ## Project นี้จัดทำขึ้นเพื่อ เรียนรู้การใช้งาน docker
  
 ``` java 
-myweb
+.
 |__ docker-compose.yml
 |__ html/
 |   |__ index.php
@@ -25,10 +30,14 @@ myweb
 |__ php/
    |__ Dockerfile
 ```   
-   
+
 ## รัน Container ด้วย docker-compose 
 ``` java
 docker-compose up -d
+```
+## ดู Containers ที่รันทั้งหมด ตามที่ docker-compose.yml ดูแล
+``` java
+docker-compose ps
 ```
 
 load Happy-Healthy-Plus-Web-App  http://localhost:8000/ in your browser.
@@ -36,3 +45,10 @@ load Happy-Healthy-Plus-Web-App  http://localhost:8000/ in your browser.
 
 load phpmyadmin load http://localhost:8080/
 
+
+
+## Stop/Delete Container ที่ docker-compose.yml ดูแล และลบ image ทั้งหมดด้วย
+ด้วยคำสั่ง 
+``` java
+docker-compose down --rmi all
+```
