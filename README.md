@@ -25,7 +25,7 @@
 |__ mariadb/
 |  |__ data/
 |  |__ initdb/
-|  |  |__ ฺBMI.sql
+|  |  |__ BMI.sql
 |  |__ backup/
 |__ php/
    |__ Dockerfile
