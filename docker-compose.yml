@@ -36,9 +36,8 @@ services:
             MYSQL_PASSWORD: MYSQL_PASSWORD
         volumes:
             - ./db/initdb/:/docker-entrypoint-initdb.d
-            - ./db/data/:/var/lib/mysql
             # เมื่อรัน Container แล้ว จะ Import ไฟล์ ".sql" ใน Folder /docker-entrypoint-initdb.d ให้อัตโนมัติ
-            # ถ้ามันพบว่าภายใน /var/lib/mysql/ ของ db Container ยังไม่มีข้อมูล
+
         ports:
             - "9906:3306"
         networks:
