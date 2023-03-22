@@ -20,8 +20,8 @@
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="index.php" class="nav-link px-2 link-secondary">Home </a></li>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="homepage.php" class="nav-link px-2 link-secondary">Home </a></li>
               <li><a href="services.php" class="nav-link px-2 link-dark">Service</a></li>
               <li><a href="food.php" class="nav-link px-2 link-dark">Food</a></li>
               <li><a href="sleep.php" class="nav-link px-2 link-dark">Sleep</a></li>
@@ -39,8 +39,8 @@
               </a>
               <ul class="dropdown-menu text-small">
                 <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                <li><a class="dropdown-item" href="setting.html">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
               </ul>
             </div>
           </div>
