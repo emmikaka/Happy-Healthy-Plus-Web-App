@@ -22,10 +22,10 @@
 |  |  |__ nginx.conf
 |  |__ conf.d/
 |     |__ default.conf
-|__ mariadb/
+|__ db/
 |  |__ data/
 |  |__ initdb/
-|  |  |__ ฺBMI.sql
+|  |  |__ BMI.sql
 |  |__ backup/
 |__ php/
    |__ Dockerfile
@@ -41,12 +41,12 @@ docker-compose up -d
 ``` java
 docker-compose ps
 ```
-![image](https://user-images.githubusercontent.com/58929525/226284416-3999f8d0-c7f3-4362-952d-6bcc7758f702.png)
+![image](https://user-images.githubusercontent.com/58929525/226402026-abea3121-1c7b-46e4-a3ef-dd2167bf3b69.png)
  หรือ 
  ``` java
 docker container ls
 ```
-![image](https://user-images.githubusercontent.com/58929525/226287573-86eed780-c8cf-4388-9b48-dde4b78a35f9.png)
+![image](https://user-images.githubusercontent.com/58929525/226402120-4d03cd53-4efc-49c4-9279-03d82ef66927.png)
 
 load Happy-Healthy-Plus-Web-App  http://localhost:8000/ in your browser.
 ![image](https://user-images.githubusercontent.com/58929525/225968624-386991a1-ef50-43ee-977b-79e8827f53b4.png)
@@ -58,7 +58,8 @@ load phpmyadmin load http://localhost:8080/
 ``` java
 docker network ls
 ```
-![image](https://user-images.githubusercontent.com/58929525/226287772-f4fe66ba-3943-48d0-b411-22ffea7257b2.png)
+![image](https://user-images.githubusercontent.com/58929525/226402382-5203b889-0f27-44d7-8e5f-8b1ffddc5c73.png)
+
 
 * หากต้องการตรวจสอบว่า container ที่เรา run เชื่อมกับ container ของ database ได้หรือไม่ให้เรา exec เข้าไปใน container phpfpm เพื่อ ping container db ซึ่งเราจั้งชื่อว่า web_php เราตั้งชื่อ services ว่า db
 
@@ -70,7 +71,7 @@ docker exec -it web_php sh
 ``` java
 ping db
 ```
-![image](https://user-images.githubusercontent.com/58929525/226285675-f03fd4d3-5c2e-4cff-ac4a-fd6456254dc0.png)
+![image](https://user-images.githubusercontent.com/58929525/226402518-4ca034c6-084b-493c-a219-6f99a09e5750.png)
 
 
 
@@ -78,7 +79,7 @@ ping db
 ``` java
 docker-compose down
 ```
-![image](https://user-images.githubusercontent.com/58929525/226288830-835aa388-455d-4ee0-b325-29ec201420c7.png)
+![image](https://user-images.githubusercontent.com/58929525/226402679-9347d7e7-f827-474b-90ba-e508c4c40eda.png)
 
 
 ## Stop/Delete Container ที่ docker-compose.yml ดูแล และลบ image ทั้งหมดด้วย
