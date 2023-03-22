@@ -75,7 +75,7 @@
                 <br> 
                   
                 <label>เพศ</label>
-                <select id="list" onchange="getSelectValue();">
+                <select id="g-list" onchange="getSelectValue();">
                     <option value="male">male</option>
                     <option value="female">female</option>
                 </select>
