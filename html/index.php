@@ -40,7 +40,7 @@
               </a>
               <ul class="dropdown-menu text-small">
                 <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
                 <li><a class="dropdown-item" href="#">Sign out</a></li>
               </ul>
             </div>

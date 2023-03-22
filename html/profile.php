@@ -77,7 +77,7 @@
                 <label>เพศ</label>
                 <select id="list" onchange="getSelectValue();">
                     <option value="male">male</option>
-                    <option value="femal">female</option>
+                    <option value="female">female</option>
                 </select>
                 <br>
 
