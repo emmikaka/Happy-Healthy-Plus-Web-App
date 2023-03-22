@@ -9,7 +9,7 @@ services:
         volumes:
           - ./html/:/var/www/html
         expose:
-          - "9000:80"
+          - "9000"
         networks:
           - BMINetwork
     nginx:
@@ -17,10 +17,10 @@ services:
         container_name: web_nginx
         restart: always
         volumes:
+          - ./html/:/var/www/html
+          #ro คือ mount เข้าไปแบบ read only
           - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
           - ./nginx/conf.d:/etc/nginx/conf.d:ro
-        volumes_from:
-          - php
         ports:
           - "8000:80"
         networks:
@@ -37,9 +37,6 @@ services:
         volumes:
             - ./db/initdb/:/docker-entrypoint-initdb.d
             # เมื่อรัน Container แล้ว จะ Import ไฟล์ ".sql" ใน Folder /docker-entrypoint-initdb.d ให้อัตโนมัติ
-
-        ports:
-            - "9906:3306"
         networks:
             - BMINetwork
     phpmyadmin:
